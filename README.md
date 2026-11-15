@@ -27,7 +27,7 @@ A computer-vision prototype for sorting **good vs. bad beans**, built as the fir
 2. Download a good/bad bean image dataset (see [Dataset](#dataset)) and extract it.
 3. In `bean_classifier.ipynb`, set `RAW_DIR` to your extracted folder and adjust `CLASS_FOLDERS` to match the folder names.
 4. Run the cells in order. The resize cell creates `data/good` and `data/bad`.
-5. Run the **duplicate-removal check** (see below) before training.
+5. Check for duplicate images before training: hash each file (for example with MD5) and delete repeats. The dataset I used contained many.
 6. Training saves `bean_classifier.keras`. Use `camera_test.ipynb` to try it on a webcam.
 
 ## Dataset
